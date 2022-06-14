@@ -41,7 +41,7 @@ void	creating_evens(t_table *table, t_philo *philo)
 		philo[idx].id = idx + 1;
 		philo[idx].table = table;
 		philo[idx].is_eating = 0;
-		philo[idx].last_time_eat = ft_get_time(0);
+		philo[idx].last_time_eat = 0;
 		pthread_create(&philo[idx].thread, NULL, &philo_routine, &philo[idx]);
 		idx += 2;
 	}
@@ -57,7 +57,7 @@ void	creating_odds(t_table *table, t_philo *philo)
 		philo[idx].id = idx + 1;
 		philo[idx].table = table;
 		philo[idx].is_eating = 0;
-		philo[idx].last_time_eat = ft_get_time(0);
+		philo[idx].last_time_eat = 0;
 		pthread_create(&philo[idx].thread, NULL, &philo_routine, &philo[idx]);
 		idx += 2;
 	}

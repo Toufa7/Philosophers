@@ -38,7 +38,7 @@ typedef struct s_philo
 {
 	int				id;
 	int				is_eating;
-	int				last_time_eat;
+	unsigned long	last_time_eat;
 	pthread_t		thread;
 	t_table			*table;
 }	t_philo;

@@ -24,11 +24,6 @@ int	main(int ac, const char **av)
 		return (0);
 	}
 	philo = malloc(sizeof(t_philo) * ft_atoi(av[1]));
-	if (ft_atoi(av[1]) == 1)
-	{
-		printf("No second fork avaliable\n");
-		return (0);
-	}
 	creating_philos(philo, av, ac);
 	ft_is_dead(philo);
 }

@@ -165,6 +165,9 @@ So once a thread has been detached it's no longer possible to use pthread_join t
  Gettimeofday() should only be used to get the current time 
 
 
+# Deadlock
+
+it's a situation where simply result for deadlock in deadlock is a situation where two or more processes are waiting for each other
 
 # Mutex
 
