@@ -190,3 +190,11 @@ The design of the problem was to illustrate the challenges of avoiding deadlock,
 - When he wake up he start thinking and wait until the 2 forks avalibale and repeat from the beginning
 
 While thes process if a philosopher didn’t start eat since the beginning of their last meal or the beginning of the simulation, they die,
+
+
+
+https://pages.mtu.edu/~shene/NSF-3/e-Book/MUTEX/TM-example-philos-1.html
+
+http://web.eecs.utk.edu/~jplank/plank/classes/cs360/360/notes/Dphil/lecture.html
+
+https://en.wikipedia.org/wiki/Dining_philosophers_problem
