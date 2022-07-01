@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_time.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 14:21:19 by otoufah           #+#    #+#             */
-/*   Updated: 2022/06/05 14:21:21 by otoufah          ###   ########.fr       */
+/*   Created: 2022/06/14 13:27:59 by otoufah           #+#    #+#             */
+/*   Updated: 2022/06/14 13:28:00 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-unsigned long	ft_get_time(unsigned long time)
+size_t	ft_strlen(const char *s)
 {
-	struct timeval	start;
+	int	i;
 
-	gettimeofday(&start, NULL);
-	return (((start.tv_sec * 1000) + (start.tv_usec * 0.001)) - time);
-}
-
-void	ft_usleep(unsigned long time)
-{
-	unsigned long	start;
-
-	start = ft_get_time(0);
-	while (ft_get_time(start) < time)
-		usleep(60);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

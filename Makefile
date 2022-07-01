@@ -6,20 +6,21 @@
 #    By: otoufah <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/05 14:20:58 by otoufah           #+#    #+#              #
-#    Updated: 2022/06/05 14:21:00 by otoufah          ###   ########.fr        #
+#    Updated: 2022/06/21 09:26:49 by otoufah          ###   ########.fr        #s
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	philo
 
-FLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra -fsanitize=thread
 
 REMOVE	=	rm -rf
 
-COMPILING	=	gcc
+COMPILING	=	gcc 
 
 FUNCTIONS	=	creating_philos.c\
 				ft_atoi.c\
+				ft_strlen.c\
 				ft_eat.c\
 				ft_get_time.c\
 				ft_grab_fork.c\
@@ -29,6 +30,7 @@ FUNCTIONS	=	creating_philos.c\
 				ft_think.c\
 				ft_is_dead.c\
 				ft_check_args.c\
+				colors.c\
 
 OBJECTS	=	$(FUNCTIONS:.c=.o)
 

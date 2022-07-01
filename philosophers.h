@@ -30,6 +30,7 @@ typedef struct s_table
 	int				how_much_eat;
 	int				eat;
 	unsigned long	start_time;
+	pthread_mutex_t	how_much;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	state_msg;
 }	t_table;
@@ -39,11 +40,13 @@ typedef struct s_philo
 	int				id;
 	int				is_eating;
 	unsigned long	last_time_eat;
+	int				eat;
 	pthread_t		thread;
 	t_table			*table;
 }	t_philo;
 
 int				ft_atoi(const char *str);
+size_t			ft_strlen(const char *s);
 unsigned long	ft_get_time(unsigned long time);
 void			ft_mutex_init(t_philo *philo, t_table *table);
 void			ft_grab_fork(t_philo *philo);
@@ -56,5 +59,11 @@ void			ft_sleep(t_philo *philo);
 void			creating_philos(t_philo *philo, const char **av, int ac);
 int				ft_is_dead(t_philo *philo);
 int				ft_check_args(int ac, const char **av);
+void			red(void);
+void			black(void);
+void			yellow(void);
+void			cyan(void);
+void			green(void);
+void			reset(void);
 
 #endif 

@@ -24,4 +24,5 @@ void	ft_mutex_init(t_philo *philo, t_table *table)
 		i++;
 	}
 	pthread_mutex_init(&table->state_msg, NULL);
+	pthread_mutex_init(&table->how_much, NULL);
 }

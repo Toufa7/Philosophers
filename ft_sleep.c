@@ -18,7 +18,9 @@ void	ft_sleep(t_philo *philo)
 
 	sleep_time = ft_get_time(philo->table->start_time);
 	pthread_mutex_lock(&philo->table->state_msg);
+	black();
 	printf("%lu %d is sleep\n", sleep_time, philo->id);
+	reset();
 	pthread_mutex_unlock(&philo->table->state_msg);
 	ft_usleep(philo->table->time_sleep);
 }

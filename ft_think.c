@@ -18,6 +18,8 @@ void	ft_think(t_philo *philo)
 
 	thiking_time = ft_get_time(philo->table->start_time);
 	pthread_mutex_lock(&philo->table->state_msg);
+	cyan();
 	printf("%lu %d is thinking\n", thiking_time, philo->id);
+	reset();
 	pthread_mutex_unlock(&philo->table->state_msg);
 }

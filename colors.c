@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_time.c                                      :+:      :+:    :+:   */
+/*   colors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otoufah <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 14:21:19 by otoufah           #+#    #+#             */
-/*   Updated: 2022/06/05 14:21:21 by otoufah          ###   ########.fr       */
+/*   Created: 2022/06/14 11:41:32 by otoufah           #+#    #+#             */
+/*   Updated: 2022/06/14 11:41:36 by otoufah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-unsigned long	ft_get_time(unsigned long time)
+void	red(void)
 {
-	struct timeval	start;
-
-	gettimeofday(&start, NULL);
-	return (((start.tv_sec * 1000) + (start.tv_usec * 0.001)) - time);
+	printf("\033[1;31m");
 }
 
-void	ft_usleep(unsigned long time)
+void	black(void)
 {
-	unsigned long	start;
+	printf("\033[0;30m");
+}
 
-	start = ft_get_time(0);
-	while (ft_get_time(start) < time)
-		usleep(60);
+void	cyan(void)
+{
+	printf("\033[0;36m");
+}
+
+void	green(void)
+{
+	printf("\033[0;32m");
+}
+
+void	reset(void)
+{
+	printf("\033[0m");
 }
